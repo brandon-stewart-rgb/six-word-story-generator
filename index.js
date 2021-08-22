@@ -20,15 +20,10 @@ const pluralNoun1 = Math.floor(Math.random() * pluralNounsArray.length);
 const pluralNoun2 = Math.floor(Math.random() * pluralNounsArray.length);
 
 
-//lists number 
-// console.log(random, adverbs[random]);
-
-//lists only word
-console.log()
-
+// Capitalize first letter
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
-}
+};
 
 // generate six word story
 button.addEventListener('click', function(e){
@@ -49,13 +44,12 @@ button.addEventListener('click', function(e){
 
         );
 });
+
+
 // clear six word story
-clear.addEventListener('click', function(){
-    
+clear.addEventListener('click', function(){  
   sixWord.innerHTML = '';
-
-   location.reload();
-
+  location.reload();
 });
 
 
