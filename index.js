@@ -3,25 +3,21 @@ var generate = document.getElementById('button');
 var clear = document.getElementById('clear-button');
 var copy = document.getElementById('copy-button');
 
-
-const adverb1 = Math.floor(Math.random() * adverbsArray.length);
-const verb1 = Math.floor(Math.random() * verbsArray.length);
-
-
-
+const adjective1 = Math.floor(Math.random() * adjectivesArray.length);
 const adverb2 = Math.floor(Math.random() * adverbsArray.length);
+const adverb3 = Math.floor(Math.random() * adverbsArray.length);
+const adverb1 = Math.floor(Math.random() * adverbsArray.length);
+
+const verb1 = Math.floor(Math.random() * verbsArray.length);
 const verb2 = Math.floor(Math.random() * verbsArray.length);
 const verb3 = Math.floor(Math.random() * verbsArray.length);
-
-const adverb3 = Math.floor(Math.random() * adverbsArray.length);
-
 
 const noun1 = Math.floor(Math.random() * nounsArray.length);
 const pluralNoun1 = Math.floor(Math.random() * pluralNounsArray.length);
 const pluralNoun2 = Math.floor(Math.random() * pluralNounsArray.length);
 
 
-// Capitalize first letter
+// Capitalize first letter function
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
@@ -31,7 +27,7 @@ generate.addEventListener('click', function(e){
     e.preventDefault();
    return sixWord.innerHTML = (
 
-        adverbsArray[adverb1].capitalize()  +' '+  
+        adjectivesArray[adjective1].capitalize()  +' '+  
 
         nounsArray[noun1] +', '+ 
 
