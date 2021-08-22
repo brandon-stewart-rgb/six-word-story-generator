@@ -1,6 +1,7 @@
 const sixWord = document.getElementById('placer');
-var button = document.getElementById('button');
+var generate = document.getElementById('button');
 var clear = document.getElementById('clear-button');
+var copy = document.getElementById('copy-button');
 
 
 const adverb1 = Math.floor(Math.random() * adverbsArray.length);
@@ -26,7 +27,7 @@ String.prototype.capitalize = function() {
 };
 
 // generate six word story
-button.addEventListener('click', function(e){
+generate.addEventListener('click', function(e){
     e.preventDefault();
    return sixWord.innerHTML = (
 
@@ -46,12 +47,20 @@ button.addEventListener('click', function(e){
 });
 
 
-// clear six word story
+// clear six word story and refresh page
 clear.addEventListener('click', function(){  
   sixWord.innerHTML = '';
   location.reload();
 });
 
+// jquery copy text function
+$('#copy-button').click(function(){
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($('#placer').text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+});
 
 
 
