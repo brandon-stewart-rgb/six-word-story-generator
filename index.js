@@ -26,14 +26,16 @@ const pluralNoun2 = Math.floor(Math.random() * pluralNounsArray.length);
 //lists only word
 console.log()
 
-   
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
 
 // generate six word story
 button.addEventListener('click', function(e){
     e.preventDefault();
    return sixWord.innerHTML = (
 
-        adverbsArray[adverb1]  +' '+  
+        adverbsArray[adverb1].capitalize()  +' '+  
 
         nounsArray[noun1] +', '+ 
 
@@ -43,7 +45,7 @@ button.addEventListener('click', function(e){
 
         verbsArray[verb2] +' '+  
 
-        pluralNounsArray[pluralNoun2]
+        pluralNounsArray[pluralNoun2] +'.'
 
         );
 });
